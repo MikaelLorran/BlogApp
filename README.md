@@ -22,7 +22,8 @@ Como Configurar
 
 Instale as dependências:
 - npm install express express-handlebars mongoose express-session connect-flash date-fns passport bcryptjs path
-  *Inicie o MongoDB localmente ou conecte-se a um servidor MongoDB Atlas.
+
+*Inicie o MongoDB localmente ou conecte-se a um servidor MongoDB Atlas.
 
 
 Execute o script principal:
