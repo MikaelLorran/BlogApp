@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-5 fw-bold" href="/">Blog do Node</a>
+
+        {{#if usuarios}}
+        <ul class="nav nav-tabs justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none text-light" aria-current="page" href="/categorias">Categorias</a>
+          </li>
+          {{#if isAdmin}}
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none text-light" aria-current="page" href="/admin/categorias">Administrar Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none text-light" aria-current="page" href="/admin/postagens">Administrar Postagens</a>
+          </li>
+          {{/if}}
+        </ul>
+          <ul class="nav justify-content-end">
+          <li class="nav-item btn btn-danger mx-1">
+            <a class="nav-link text-decoration-none text-light" aria-current="page" href="/usuarios/logout">Sair <i class="bi bi-box-arrow-right"></i></a>
+          </li>
+        </ul>
+        {{else}}
+        <ul class="nav justify-content-end">
+          <li class="nav-item btn btn-primary mx-1">
+            <a class="nav-link text-decoration-none text-light" aria-current="page" href="/usuarios/login">Entrar <i class="bi bi-person-fill"></i> </a>
+          </li>
+          <li class="nav-item btn btn-success mx-1">
+            <a class="nav-link text-decoration-none text-light" aria-current="page" href="/usuarios/registro">Registrar</a>
+          </li>
+        </ul>
+        {{/if}}
+  </div>
+</nav>
